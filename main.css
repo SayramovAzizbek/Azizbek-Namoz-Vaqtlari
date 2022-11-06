@@ -1,0 +1,122 @@
+.site-body {
+    background-image: url("./images/day-img.jpg");
+    /* background-position: center; */
+    /* background-size: 100% 1000px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.site-body--night {
+    color: #fff;
+    background-image: url("./images/night-img-4.jpg");
+}
+
+#pray {
+    padding: 20px 0 40px 0;
+}
+
+.pray-main-title {
+    margin: 0 0 50px 0;
+    font-weight: bold;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.pray-main-btn-select-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pray-btn {
+    padding: 5px 20px;
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #62ff00;
+}
+
+.pray-daily-btn {
+    margin-right: 20px;
+}
+
+.pray-location-select {
+    margin-left: 20px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #62ff00;
+}
+
+.pray-location-select:focus {
+    border: 3px solid #62ff00;
+}
+
+.pray-location-select option {
+    color: #000;
+}
+
+.pray-location-res-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pray-location-res {
+    margin: 0;
+    color: #fff;
+}
+
+.pray-list,
+.pray-list-weekly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pray-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    border-radius: 50%;
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 5px 5px #62ff00;
+}
+
+.pray-texts-item {
+    margin: 0;
+    font-weight: 700;
+}
+
+.pray-item-text {
+    margin-bottom: 10px;
+}
+
+.pray-list-weekly {
+    justify-content: center;
+}
+
+.pray-item-weekly {
+    color: #fff;
+    backdrop-filter: blur(50px);
+}
+
+.pray-texts {
+    margin: 0;
+    padding: 20px;
+    font-weight: 700;
+    border: 1px solid;
+}
+
+.pray-date {
+    border: none;
+}
