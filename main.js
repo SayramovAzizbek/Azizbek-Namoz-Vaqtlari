@@ -12,20 +12,31 @@ const prayItemTimeText = document.querySelector(".pray-item-time-text");
 const pray_API = "https://islomapi.uz/api/present/day?region=Toshkent";
 const pray_API_weekly = "https://islomapi.uz/api/present/week?region=Toshkent";
 
+prayListWeekly.classList.add("d-none")
+// const currentDateDay = new Date();
+// const currentDateHours = currentDateDay.getHours();
+// console.log(currentDateHours);
 function prayRender(url) {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      const currentDate = new Date();
-      console.log(currentDate);
-      if (data.times.shom_iftor) {
-        siteBody.classList.add("site-body--night");
-        console.log(data.times.shom_iftor);
-      } else if (data.times.tong_saharlik) {
-        siteBody.classList.remove("site-body--night");
-      } else {
-        console.log("shit");
-      }
+      // data.times.hufton = currentDateHours;
+      // data.times.shom_iftor = currentDateHours;
+      // data.times.tong_saharlik = currentDateHours;
+      // if (data.times.hufton) {
+      //   siteBody.classList.add("site-body--night");
+      //   console.log("hufton");
+      // } else if (data.times.shom_iftor) {
+      //   siteBody.classList.add("site-body--sunset");
+      //   siteBody.classList.remove("site-body--night");
+      //   console.log("shom");
+      // } else if (data.times.tong_saharlik) {
+      //   siteBody.classList.remove("site-body--night");
+      //   siteBody.classList.remove("site-body--sunset");
+      //   console.log("sahar");
+      // } else {
+      //   console.log("no no no");
+      // }
       prayList.childNodes[1].childNodes[3].textContent =
         data.times.tong_saharlik;
       prayList.childNodes[3].childNodes[3].textContent = data.times.quyosh;
@@ -76,6 +87,7 @@ function prayWeekly(url) {
     })
     .catch((err) => console.log(err));
 }
+
 prayDailyBtn.addEventListener("click", () => {
   prayListWeekly.classList.add("d-none");
   prayList.classList.remove("d-none");
